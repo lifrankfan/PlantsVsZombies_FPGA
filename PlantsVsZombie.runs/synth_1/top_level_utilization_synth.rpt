@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed May  1 18:58:37 2024
+| Date         : Thu May  2 09:00:39 2024
 | Host         : pop-os running 64-bit Pop!_OS 22.04 LTS
 | Command      : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
 | Design       : top_level
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 2065 |     0 |          0 |     32600 |  6.33 |
-|   LUT as Logic          | 2065 |     0 |          0 |     32600 |  6.33 |
+| Slice LUTs*             | 2151 |     0 |          0 |     32600 |  6.60 |
+|   LUT as Logic          | 2151 |     0 |          0 |     32600 |  6.60 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  458 |     0 |          0 |     65200 |  0.70 |
-|   Register as Flip Flop |  458 |     0 |          0 |     65200 |  0.70 |
-|   Register as Latch     |    0 |     0 |          0 |     65200 |  0.00 |
-| F7 Muxes                |   54 |     0 |          0 |     16300 |  0.33 |
+| Slice Registers         |  460 |     0 |          0 |     65200 |  0.71 |
+|   Register as Flip Flop |  459 |     0 |          0 |     65200 |  0.70 |
+|   Register as Latch     |    1 |     0 |          0 |     65200 | <0.01 |
+| F7 Muxes                |   16 |     0 |          0 |     16300 |  0.10 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -58,8 +58,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 29    |          Yes |           - |        Reset |
-| 8     |          Yes |         Set |            - |
-| 421   |          Yes |       Reset |            - |
+| 0     |          Yes |         Set |            - |
+| 431   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,20 +148,20 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  988 |                 LUT |
-| FDRE     |  421 |        Flop & Latch |
-| LUT2     |  374 |                 LUT |
-| LUT4     |  357 |                 LUT |
-| LUT3     |  317 |                 LUT |
-| LUT5     |  312 |                 LUT |
-| CARRY4   |  280 |          CarryLogic |
-| LUT1     |  146 |                 LUT |
-| MUXF7    |   54 |               MuxFx |
+| LUT6     | 1083 |                 LUT |
+| FDRE     |  431 |        Flop & Latch |
+| LUT3     |  383 |                 LUT |
+| LUT2     |  358 |                 LUT |
+| LUT5     |  357 |                 LUT |
+| LUT4     |  295 |                 LUT |
+| CARRY4   |  257 |          CarryLogic |
+| LUT1     |  157 |                 LUT |
 | OBUF     |   29 |                  IO |
-| FDCE     |   29 |        Flop & Latch |
-| FDSE     |    8 |        Flop & Latch |
+| FDCE     |   28 |        Flop & Latch |
+| MUXF7    |   16 |               MuxFx |
 | DSP48E1  |    7 |    Block Arithmetic |
 | IBUF     |    5 |                  IO |
+| LDCE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
 
@@ -171,7 +171,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------------------------------+------+
 |             Ref Name             | Used |
 +----------------------------------+------+
-| peashooter_rom                   |    2 |
+| plants_sprites_rom               |    1 |
+| peashooter_rom                   |    1 |
 | mb_block_xbar_0                  |    1 |
 | mb_block_rst_clk_wiz_1_100M_0    |    1 |
 | mb_block_microblaze_0_axi_intc_0 |    1 |

@@ -92,6 +92,7 @@ OPTRACE "Adding files" START { }
 add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/pvz_background/pvz_background.COE
 add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/background/background.COE
 add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/peashooter/peashooter.COE
+add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/plants_sprites/plants_sprites.COE
 read_verilog -library xil_defaultlib -sv {
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/VGA_controller.sv
@@ -102,6 +103,8 @@ read_verilog -library xil_defaultlib -sv {
   /media/lifrankfan/CrucialX6/PlantsVsZombie/images/peashooter/peashooter_example.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/images/peashooter/peashooter_palette.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv
+  /media/lifrankfan/CrucialX6/PlantsVsZombie/images/plants_sprites/plants_sprites_example.sv
+  /media/lifrankfan/CrucialX6/PlantsVsZombie/images/plants_sprites/plants_sprites_palette.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv
 }
 read_ip -quiet /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
@@ -158,6 +161,9 @@ set_property used_in_implementation false [get_files -all /media/lifrankfan/Cruc
 
 read_ip -quiet /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/ip/peashooter_rom/peashooter_rom.xci
 set_property used_in_implementation false [get_files -all /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/peashooter_rom/peashooter_rom_ooc.xdc]
+
+read_ip -quiet /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/ip/plants_sprites_rom/plants_sprites_rom.xci
+set_property used_in_implementation false [get_files -all /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/plants_sprites_rom/plants_sprites_rom_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -48,6 +48,7 @@ module top_level(
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
     logic reset_ah;
+    logic [15:0] gpio_hex;
     
     assign reset_ah = reset_rtl_0;
     
@@ -56,7 +57,7 @@ module top_level(
     hex_driver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode0_gpio[31:28], keycode0_gpio[27:24], keycode0_gpio[23:20], x_gpio}),
+        .in({gpio_hex[15:12], gpio_hex[11:8], gpio_hex[7:4], gpio_hex[3:0]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -157,7 +158,8 @@ module top_level(
         
         .Red(red),
         .Green(green),
-        .Blue(blue)
+        .Blue(blue),
+        .gpio_hex(gpio_hex)
     );
     
 endmodule

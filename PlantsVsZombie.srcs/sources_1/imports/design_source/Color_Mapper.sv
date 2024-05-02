@@ -1,7 +1,9 @@
 module  color_mapper (input  logic       pixel_clk, frame_clk, Reset,
                       input  logic [9:0] DrawX, DrawY,
                       input  logic [7:0] keycode,
-                      output logic [3:0] Red, Green, Blue );
+                      output logic [3:0] Red, Green, Blue,
+                      output logic [15:0] gpio_hex
+                      );
 
     parameter [7:0] entity_count = 11;
     parameter [7:0] tile_x_offset=147;
@@ -17,11 +19,15 @@ module  color_mapper (input  logic       pixel_clk, frame_clk, Reset,
     logic        spawn;
     logic        soft_reset;
     logic        shovel;
+    logic        shoot;
 
     logic        plant_arr[9][5];
+    logic        pea_arr[9][5];
     logic [3:0]  plant_x;
     logic [2:0]  plant_y;
-
+    
+    logic [7:0]  game_clk;
+//    assign gpio_hex = game_clk;   
 
     logic [3:0] bg_r, bg_g, bg_b;
     logic [3:0] peashooter_r, peashooter_g, peashooter_b;
@@ -34,8 +40,8 @@ module  color_mapper (input  logic       pixel_clk, frame_clk, Reset,
             Green = 4'h0;
             Blue = 4'h0;
         end
-        else if (DrawX >= plant_x * tile_width + 158 && // tile_x_offset + tile_x_center - 13
-                 DrawX < plant_x * tile_width + 184 &&  // tile_x_offset + tile_x_center + 13
+        else if (DrawX >= plant_x * tile_width + 155 && // tile_x_offset + tile_x_center - 16
+                 DrawX < plant_x * tile_width + 187 &&  // tile_x_offset + tile_x_center + 16
                  DrawY >= plant_y * tile_height + 144 &&
                  DrawY < plant_y * tile_height + 176 &&
                  {plant_r, plant_g, plant_b} != 12'hf0f && {plant_r, plant_g, plant_b} != 12'h000) begin
@@ -82,6 +88,11 @@ module  color_mapper (input  logic       pixel_clk, frame_clk, Reset,
         end
     end
     
+    always_ff @(posedge frame_clk)
+    begin
+        game_clk <= game_clk + 1;
+    end
+    
 background_example background_inst (
     .vga_clk(pixel_clk),
     .DrawX(DrawX),
@@ -106,6 +117,8 @@ peashooter_example peashooter_inst(
 plant plant_inst( 
     .Reset(Reset), 
     .pixel_clk(pixel_clk),
+    .frame_clk(frame_clk),
+    .game_clk(game_clk),
     .cursor_x(cursor_x),
     .cursor_y(cursor_y),
     .DrawX(DrawX),
@@ -119,12 +132,15 @@ plant plant_inst(
     .red(plant_r),
     .green(plant_g),
     .blue(plant_b),
-    .plant_arr(plant_arr)
+    .plant_arr(plant_arr),
+    .shoot(shoot),
+    .gpio_hex(gpio_hex)
 );
 
 cursor cursor_inst(
     .Reset(Reset), 
     .frame_clk(frame_clk),
+    .game_clk(game_clk),
     .keycode(keycode),
     
     .cursor_x(cursor_x), 

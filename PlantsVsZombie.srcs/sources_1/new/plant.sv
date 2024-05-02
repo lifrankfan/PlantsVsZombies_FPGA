@@ -2,6 +2,8 @@ module  plant
 ( 
     input  logic        Reset, 
     input  logic        pixel_clk,
+    input  logic        frame_clk,
+    input  logic [7:0]  game_clk,
     input  logic [3:0]  cursor_x, 
     input  logic [2:0]  cursor_y, 
     input  logic [9:0]  DrawX,
@@ -15,7 +17,9 @@ module  plant
     output logic [3:0]  red,
     output logic [3:0]  green,
     output logic [3:0]  blue,
-    output logic        plant_arr [9][5]
+    output logic        plant_arr [9][5],
+    output logic        shoot,
+    output logic [15:0]  gpio_hex
 );
     parameter [7:0] tile_x_offset=147;
     parameter [7:0] tile_y_offset=128;
@@ -26,20 +30,30 @@ module  plant
     parameter [7:0] plant_size = 10; 
     
     logic       plant_arr_[9][5];
-    logic       plant_arr_next[9][5];
     logic [2:0] plant_code_[9][5];
-    logic [2:0] plant_code_next[9][5];
     logic [3:0] health[9][5];
-    logic [3:0] health_next[9][5];
     integer plant_x;
     integer plant_y;
 
-    logic [3:0] red, green, blue;
-    logic [3:0] peashooter_r, peashooter_g, peashooter_b;
+    logic [3:0] red_, green_, blue_;
+    
+    logic [7:0] animation;
+    logic       shoot_;
+    logic       action;
+    logic       detected;
+    logic [7:0] sun;
+    logic [5:0] sunflowers, prev_sunflowers;
+    logic       add_sun;
+    logic [3:0] pea;
+    
+    assign detected = 1'b1;
+    assign gpio_hex = {sun[3:0], sunflowers[3:0], 2'b0, animation[1:0],1'b0, animation[2:0]};
 
     assign plant_arr = plant_arr_;
+    assign shoot = shoot_;
+    
     always_comb 
-    begin
+    begin: XY_to_grid
         plant_x = 0;
         plant_y = 0;
         if (DrawX >= 147 && DrawX <= 579 ) begin
@@ -59,7 +73,7 @@ module  plant
                 for (j = 0; j < 5; j = j + 1) begin
                     plant_arr_[i][j] <= 1'b0;
                     plant_code_[i][j] <= 3'b0;
-                    health[i][j] <= 6'b0;
+                    health[i][j] <= 4'b0;
                 end
             end
         end
@@ -73,72 +87,108 @@ module  plant
             plant_code_[cursor_x][cursor_y] <= plant_code;
             case (plant_code)
                 3'd1: //peashooter
-                    health[cursor_x][cursor_y] <= 6'd5;
+                    health[cursor_x][cursor_y] <= 4'd5;
                 3'd2: //walnut                 
-                    health[cursor_x][cursor_y] <= 6'd10;
+                    health[cursor_x][cursor_y] <= 4'd10;
                 3'd3: //sunflower              
-                    health[cursor_x][cursor_y] <= 6'd5;
+                    health[cursor_x][cursor_y] <= 4'd5;
                 3'd4: //iceshooter             
-                    health[cursor_x][cursor_y] <= 6'd6;
+                    health[cursor_x][cursor_y] <= 4'd6;
                 default:                       
-                    health[cursor_x][cursor_y] <= 6'd0;
+                    health[cursor_x][cursor_y] <= 4'd0;
             endcase
         end
         else if (DrawX >= tile_x_offset && DrawX <= 579 &&
                 DrawY >= tile_y_offset && DrawY <= 448)
         begin
-            if (health[plant_x][plant_y] == 6'd0) begin
+            if (health[plant_x][plant_y] == 4'd0) begin
                     plant_arr_[plant_x][plant_y] <= 1'b0;
                     plant_code_[plant_x][plant_y] <= 3'b0;
-                    health[plant_x][plant_y] <= 6'd0;
+                    health[plant_x][plant_y] <= 4'd0;
             end
         end
     end
 
-    always_ff @(posedge pixel_clk)
+    always_comb
     begin: plant_color
         {red, green, blue} = 12'hF0F;
         if (DrawX >= tile_x_offset && DrawX <= 579 &&
             DrawY >= tile_y_offset && DrawY <= 448 ) 
         begin
-            if (plant_arr_[plant_x][plant_y] == 1'b1)
-                begin
-                // {red, green, blue} = {plant_r, plant_g, plant_b};
-                // else = F0F
-                    case (plant_code_[plant_x][plant_y])
-                        3'd1: //peashooter
-                            {red, green, blue} = {peashooter_r, peashooter_g, peashooter_b};
-                        3'd2: //wallnut
-                            {red, green, blue} = 12'h740;
-                        3'd3: //sunflower
-                            {red, green, blue} = 12'hFF0;
-                        3'd4: //iceshooter
-                            {red, green, blue} = 12'h7ff;
-                    endcase
-                end
-        end 
-        else 
-        begin
-            {red, green, blue} = 12'hF0F;
+            if (plant_arr_[plant_x][plant_y])
+            begin
+                {red, green, blue} <= {red_, green_, blue_};
+            end
         end
     end
 
     always_ff @(posedge pixel_clk)
     begin: health_reduction
-        if (hit && plant_arr_[plant_x][plant_y] && health[plant_x][plant_y] != 6'd0) begin
+        if (hit && plant_arr_[plant_x][plant_y] && health[plant_x][plant_y] != 4'd0) begin
             health[plant_x][plant_y] <= health[plant_x][plant_y] - 1;
         end
     end
 
-peashooter_example peashooter_inst(
+    always_ff @(posedge game_clk[3])
+    begin: animation_sequence
+        animation <= animation + 1;
+    end
+
+    always_comb
+    begin
+        if (plant_code_[plant_x][plant_y] == 3'd1 || plant_code_[plant_x][plant_y] == 3'd4) begin
+            if (animation[3:2] == 2'b11) begin
+                action = 1'b1;
+                shoot_ = 1'b1;
+                pea = pea + 1;
+            end
+        end
+        else if (plant_code_[plant_x][plant_y] == 3'd2) begin
+            if (health[plant_x][plant_y] < 4'd5) begin
+                action = 1'b1;
+                shoot_ = 1'b0;
+            end
+        end
+        else if (plant_code_[plant_x][plant_y] == 3'd3) begin
+            if (animation[4:2] == 3'b111) begin
+                action = 1'b1;
+                shoot_ = 1'b0;
+                add_sun = 1'b1;
+            end
+        end
+        else begin
+            action = 1'b0;
+            shoot_ = 1'b0;
+            add_sun = 1'b0;
+        end
+    end
+    
+    always_ff @(posedge animation[3])
+    begin
+    integer i, j;
+    sunflowers = 6'b0;
+    for (i = 0; i < 9; i = i + 1) begin
+        for (j = 0; j < 5; j = j + 1) begin
+            if (plant_code_[i][j] == 3'd3) begin
+                sunflowers = sunflowers + 1;
+            end
+        end
+    end
+    sun <= sun + 1 + prev_sunflowers;
+    prev_sunflowers <= sunflowers;
+end
+
+
+plants_sprites_example plants_sprites_inst(
     .vga_clk(pixel_clk),
-    //- tile_x_offset +tile_x_center - 13 | - tile_y_offset + tile_y_center - 16
-    .DrawX((((DrawX - 145)%48)-10)%26), // removed tile_x_center - 1 deleted right side
+    .DrawX((((DrawX - 147)%48)-5)%32),
     .DrawY((DrawY - 144) % 32),
+    .animation(animation[1:0] + action * 4),
+    .plant(plant_code_[plant_x][plant_y] - 1 ),
     .blank(1'b1),
-    .red(peashooter_r),
-    .green(peashooter_g),
-    .blue(peashooter_b)
+    .red(red_),
+    .green(green_),
+    .blue(blue_)
 );
 
 endmodule

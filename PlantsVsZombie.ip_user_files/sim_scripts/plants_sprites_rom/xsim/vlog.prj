@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../PlantsVsZombie.gen/sources_1/ip/plants_sprites_rom/sim/plants_sprites_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

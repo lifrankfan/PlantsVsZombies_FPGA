@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed May  1 21:11:52 2024
+# Process ID: 932995
+# Current directory: /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/plants_sprites_rom_synth_1
+# Command line: vivado -log plants_sprites_rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source plants_sprites_rom.tcl
+# Log file: /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/plants_sprites_rom_synth_1/plants_sprites_rom.vds
+# Journal file: /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/plants_sprites_rom_synth_1/vivado.jou
+# Running On: pop-os, OS: Linux, CPU Frequency: 1287.627 MHz, CPU Physical cores: 14, Host memory: 16364 MB
+#-----------------------------------------------------------
+source plants_sprites_rom.tcl -notrace

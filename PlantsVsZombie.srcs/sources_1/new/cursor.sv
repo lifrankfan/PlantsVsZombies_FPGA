@@ -3,6 +3,7 @@
 module cursor(
     input  logic        Reset, 
     input  logic        frame_clk,
+    input  logic [7:0]  game_clk,
     input  logic [7:0]  keycode,
     
     output logic [3:0]  cursor_x, 
@@ -16,24 +17,13 @@ module cursor(
     logic [3:0]  cursor_x_;
     logic [2:0]  cursor_y_;
     logic [3:0]  plant_code_;
-    logic [2:0]  counter;
     
     assign cursor_x = cursor_x_;
     assign cursor_y = cursor_y_;
     assign plant_code = plant_code_;
     
-    // cursor counter
-    always_ff @(posedge frame_clk)
-    begin
-        if (Reset) begin
-            counter <= 3'b0;
-        end
-        else begin
-            counter <= counter + 1;
-        end
-    end
     // special case for shovel because want default to be 0
-    always_ff @(posedge counter[2])
+    always_ff @(posedge game_clk[2])
     begin
         if (keycode == 8'h2A) begin // backspace
             shovel <= 1'b1;
@@ -43,7 +33,7 @@ module cursor(
         end
     end
     // special case for soft rest because want default to be 0
-    always_ff @(posedge counter[2])
+    always_ff @(posedge game_clk[2])
     begin
         if (keycode == 8'h15) begin // r
             soft_reset <= 1'b1;
@@ -53,7 +43,7 @@ module cursor(
         end
     end
     // special case for spawn because want default to be 0
-    always_ff @(posedge counter[2])
+    always_ff @(posedge game_clk[2])
     begin
         if (keycode == 8'h2C) begin // space
             spawn <= 1'b1;
@@ -64,7 +54,7 @@ module cursor(
     end
 
     // read keycode every 4 cycles    
-    always_ff @(posedge counter[2])
+    always_ff @(posedge game_clk[2])
     begin
         if (Reset) begin
             cursor_x_ <= 4'b0;
