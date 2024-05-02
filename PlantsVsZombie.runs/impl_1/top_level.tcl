@@ -145,6 +145,7 @@ OPTRACE "add files" START { }
   read_ip -quiet /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/bd/mb_block/mb_block.bd
   read_ip -quiet /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/ip/background_rom/background_rom.xci
+  read_ip -quiet /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/ip/peashooter_rom/peashooter_rom.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
