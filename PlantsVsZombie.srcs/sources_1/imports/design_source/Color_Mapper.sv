@@ -117,7 +117,6 @@ peashooter_example peashooter_inst(
 plant plant_inst( 
     .Reset(Reset), 
     .pixel_clk(pixel_clk),
-    .frame_clk(frame_clk),
     .game_clk(game_clk),
     .cursor_x(cursor_x),
     .cursor_y(cursor_y),

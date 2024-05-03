@@ -830,3 +830,38 @@ timestamp=[2024-05-02 09:05:13], mode=PLATFORM_GENERATION, duration=0:00:05.209,
 timestamp=[2024-05-02 09:05:20], mode=PLATFORM_GENERATION, duration=0:00:06.548, duration_ms=6548, data={name=top_level}
 timestamp=[2024-05-02 09:05:22], mode=BUILD, duration=0:00:01.314, duration_ms=1314, data={name=PlantsVsZombies, configuration=Debug, clean_build=false}
 timestamp=[2024-05-02 09:05:23], mode=BUILD, duration=0:00:00.229, duration_ms=229, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 17:30:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.026, duration_ms=26, data={}
+timestamp=[2024-05-02 17:30:01], mode=WORKBENCH_START, duration=0:00:06.507, duration_ms=6507, data={}
+timestamp=[2024-05-02 17:30:01], mode=WORKBENCH_UI_INIT, duration=0:00:00.619, duration_ms=619, data={editors_count=4, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=PlantsVsZombies,PlantsVsZombies_system,RemoteSystemsTempFiles,top_level}
+timestamp=[2024-05-02 17:48:15], mode=BUILD, duration=0:00:00.309, duration_ms=309, data={name=PlantsVsZombies, configuration=Debug, clean_build=true}
+timestamp=[2024-05-02 17:48:15], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=true}
+timestamp=[2024-05-02 17:48:20], mode=PLATFORM_GENERATION, duration=0:00:05.364, duration_ms=5364, data={name=top_level}
+timestamp=[2024-05-02 17:48:27], mode=PLATFORM_GENERATION, duration=0:00:06.443, duration_ms=6443, data={name=top_level}
+timestamp=[2024-05-02 17:48:29], mode=BUILD, duration=0:00:01.098, duration_ms=1098, data={name=PlantsVsZombies, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 17:48:30], mode=BUILD, duration=0:00:00.340, duration_ms=340, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:04:18], mode=PLATFORM_GENERATION, duration=0:00:06.251, duration_ms=6251, data={name=top_level}
+timestamp=[2024-05-02 18:04:20], mode=BUILD, duration=0:00:01.255, duration_ms=1255, data={name=PlantsVsZombies, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:04:21], mode=BUILD, duration=0:00:00.299, duration_ms=299, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:24:25], mode=PLATFORM_GENERATION, duration=0:00:06.421, duration_ms=6421, data={name=top_level}
+timestamp=[2024-05-02 18:24:27], mode=BUILD, duration=0:00:01.191, duration_ms=1191, data={name=PlantsVsZombies, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:24:28], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:25:18], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=PlantsVsZombies, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:25:19], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:36:37], mode=PLATFORM_GENERATION, duration=0:00:06.495, duration_ms=6495, data={name=top_level}
+timestamp=[2024-05-02 18:36:38], mode=BUILD, duration=0:00:00.989, duration_ms=989, data={name=PlantsVsZombies, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:36:39], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:37:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.016, duration_ms=16, data={}
+timestamp=[2024-05-02 18:37:55], mode=WORKBENCH_START, duration=0:00:06.805, duration_ms=6805, data={}
+timestamp=[2024-05-02 18:37:56], mode=WORKBENCH_UI_INIT, duration=0:00:00.916, duration_ms=916, data={editors_count=4, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=PlantsVsZombies,PlantsVsZombies_system,RemoteSystemsTempFiles,top_level}
+timestamp=[2024-05-02 18:46:42], mode=BUILD, duration=0:00:00.336, duration_ms=336, data={name=PlantsVsZombies, configuration=Debug, clean_build=true}
+timestamp=[2024-05-02 18:46:42], mode=BUILD, duration=0:00:00.247, duration_ms=247, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=true}
+timestamp=[2024-05-02 18:46:48], mode=PLATFORM_GENERATION, duration=0:00:05.431, duration_ms=5431, data={name=top_level}
+timestamp=[2024-05-02 18:46:55], mode=PLATFORM_GENERATION, duration=0:00:06.308, duration_ms=6308, data={name=top_level}
+timestamp=[2024-05-02 18:46:56], mode=BUILD, duration=0:00:01.070, duration_ms=1070, data={name=PlantsVsZombies, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:46:57], mode=BUILD, duration=0:00:00.379, duration_ms=379, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:55:01], mode=BUILD, duration=0:00:00.317, duration_ms=317, data={name=PlantsVsZombies, configuration=Debug, clean_build=true}
+timestamp=[2024-05-02 18:55:01], mode=BUILD, duration=0:00:00.295, duration_ms=295, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=true}
+timestamp=[2024-05-02 18:55:07], mode=PLATFORM_GENERATION, duration=0:00:05.418, duration_ms=5418, data={name=top_level}
+timestamp=[2024-05-02 18:55:13], mode=PLATFORM_GENERATION, duration=0:00:06.497, duration_ms=6497, data={name=top_level}
+timestamp=[2024-05-02 18:55:15], mode=BUILD, duration=0:00:01.398, duration_ms=1398, data={name=PlantsVsZombies, configuration=Debug, clean_build=false}
+timestamp=[2024-05-02 18:55:16], mode=BUILD, duration=0:00:00.350, duration_ms=350, data={name=PlantsVsZombies_system, configuration=Debug, clean_build=false}

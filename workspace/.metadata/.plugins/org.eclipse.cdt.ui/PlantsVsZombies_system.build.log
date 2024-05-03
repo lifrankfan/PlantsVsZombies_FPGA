@@ -1,6 +1,6 @@
-09:05:23 **** Build of configuration Debug for project PlantsVsZombies_system ****
+18:55:16 **** Build of configuration Debug for project PlantsVsZombies_system ****
 make all 
 Skipping SD card image generation. Reason: The system project only has applications for microblaze processors.
 
-09:05:23 Build Finished (took 226ms)
+18:55:16 Build Finished (took 344ms)
 

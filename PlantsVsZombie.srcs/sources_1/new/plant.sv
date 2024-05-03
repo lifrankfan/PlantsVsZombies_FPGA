@@ -2,7 +2,6 @@ module  plant
 ( 
     input  logic        Reset, 
     input  logic        pixel_clk,
-    input  logic        frame_clk,
     input  logic [7:0]  game_clk,
     input  logic [3:0]  cursor_x, 
     input  logic [2:0]  cursor_y, 
@@ -42,8 +41,8 @@ module  plant
     logic       action;
     logic       detected;
     logic [7:0] sun;
-    logic [5:0] sunflowers, prev_sunflowers;
-    logic       add_sun;
+    logic [7:0] sunflowers, prev_sunflowers;
+    logic       sun_clock;
     logic [3:0] pea;
     
     assign detected = 1'b1;
@@ -82,7 +81,7 @@ module  plant
             plant_code_[cursor_x][cursor_y] <= 1'b0;
             health[cursor_x][cursor_y] <= 1'b0;
         end
-        else if (spawn && plant_arr_[cursor_x][cursor_y] == 1'b0) begin
+        else if (spawn && plant_arr_[cursor_x][cursor_y] == 1'b0 && plant_code != 3'b0) begin
             plant_arr_[cursor_x][cursor_y] <= 1'b1;
             plant_code_[cursor_x][cursor_y] <= plant_code;
             case (plant_code)
@@ -136,6 +135,8 @@ module  plant
 
     always_comb
     begin
+        action = 1'b0;
+        shoot_ = 1'b0;;
         if (plant_code_[plant_x][plant_y] == 3'd1 || plant_code_[plant_x][plant_y] == 3'd4) begin
             if (animation[3:2] == 2'b11) begin
                 action = 1'b1;
@@ -152,21 +153,23 @@ module  plant
         else if (plant_code_[plant_x][plant_y] == 3'd3) begin
             if (animation[4:2] == 3'b111) begin
                 action = 1'b1;
-                shoot_ = 1'b0;
-                add_sun = 1'b1;
+                shoot_ = 1'b0;;
             end
         end
-        else begin
-            action = 1'b0;
-            shoot_ = 1'b0;
-            add_sun = 1'b0;
-        end
     end
+    
+//    always_ff @(posedge animation[3]) 
+//    begin
+//        sun_clock <= 1'b0;
+//        if (animation[4:2] == 3'b111) begin
+//            sun_clock <= 1'b1;
+//        end
+//    end
     
     always_ff @(posedge animation[3])
     begin
     integer i, j;
-    sunflowers = 6'b0;
+    sunflowers = 8'b0;
     for (i = 0; i < 9; i = i + 1) begin
         for (j = 0; j < 5; j = j + 1) begin
             if (plant_code_[i][j] == 3'd3) begin
@@ -174,8 +177,10 @@ module  plant
             end
         end
     end
-    sun <= sun + 1 + prev_sunflowers;
-    prev_sunflowers <= sunflowers;
+    if (animation[4:2] == 3'b111) begin
+        sun <= sun + 1 + prev_sunflowers;
+        prev_sunflowers <= sunflowers;
+    end
 end
 
 

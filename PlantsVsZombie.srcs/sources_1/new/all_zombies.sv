@@ -29,7 +29,7 @@ module AllZombies(
     input  logic [9:0]  hit,
     input  logic        soft_reset,
     input  logic        frame_clk,
-    input  logic        vsync,
+
     output logic [3:0]  red,
     output logic [3:0]  green,
     output logic [3:0]  blue,
@@ -80,13 +80,6 @@ module AllZombies(
             end else if (zomb_alive[4] == 1'b0) begin
                 zomb_spawn_arr[4] = 1'b1;
             end
-//            for (int i = 0; i <= zomb_num; i++) begin
-//                if (zomb_alive[i] == 1'b0) begin
-//                    leds[0] = 1;
-//                    zomb_spawn_arr[i] = 1'b1;
-//                    break;
-//                end
-//            end
         end
      end
      
@@ -111,13 +104,6 @@ module AllZombies(
             draw_active_arr_local[4] == 1'b1 ) begin
             {zomb_r, zomb_g, zomb_b} = 12'h8A9;
         end
-//        for (int i = 0; i <= zomb_num; i++) begin
-//                if (draw_active_arr[i] == 1'b1) begin
-//                    leds[1] = 1;
-//                    {zomb_r, zomb_g, zomb_b} = 12'h8A9;
-//                    break;
-//                end
-//        end
      end
      
      
@@ -138,8 +124,7 @@ zombie zomb_inst_1 (
     .Ypos_out(Yrow[0]),
     .draw_active(draw_active_arr_local[0]),
     .alive(zomb_alive[0]),
-    .leds(leds),
-    .vsync(vsync)
+    .leds(leds)
 );
 zombie zomb_inst_2 (
     .soft_reset(soft_reset),
@@ -155,8 +140,7 @@ zombie zomb_inst_2 (
     .Xpos(Xpos[1]),
     .Ypos_out(Yrow[1]),
     .draw_active(draw_active_arr_local[1]),
-    .alive(zomb_alive[1]),
-    .vsync(vsync)
+    .alive(zomb_alive[1])
 );
 zombie zomb_inst_3 (
     .soft_reset(soft_reset),
@@ -172,8 +156,7 @@ zombie zomb_inst_3 (
     .Xpos(Xpos[2]),
     .Ypos_out(Yrow[2]),
     .draw_active(draw_active_arr_local[2]),
-    .alive(zomb_alive[2]),
-    .vsync(vsync)
+    .alive(zomb_alive[2])
 );
 zombie zomb_inst_4 (
     .soft_reset(soft_reset),
@@ -189,8 +172,7 @@ zombie zomb_inst_4 (
     .Xpos(Xpos[3]),
     .Ypos_out(Yrow[3]),
     .draw_active(draw_active_arr_local[3]),
-    .alive(zomb_alive[3]),
-    .vsync(vsync)
+    .alive(zomb_alive[3])
 );
 zombie zomb_inst_5 (
     .soft_reset(soft_reset),
@@ -206,8 +188,7 @@ zombie zomb_inst_5 (
     .Xpos(Xpos[4]),
     .Ypos_out(Yrow[4]),
     .draw_active(draw_active_arr_local[4]),
-    .alive(zomb_alive[4]),
-    .vsync(vsync)
+    .alive(zomb_alive[4])
 );
 //zombie zomb_inst_6 (
 //    .soft_reset(soft_reset),
