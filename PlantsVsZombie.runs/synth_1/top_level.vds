@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu May  2 18:48:32 2024
-# Process ID: 431658
+# Start of session at: Sat May  4 04:13:42 2024
+# Process ID: 2347275
 # Current directory: /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1
 # Command line: vivado -log top_level.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 # Log file: /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/top_level.vds
 # Journal file: /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/vivado.jou
-# Running On: pop-os, OS: Linux, CPU Frequency: 2021.285 MHz, CPU Physical cores: 14, Host memory: 16364 MB
+# Running On: pop-os, OS: Linux, CPU Frequency: 1220.795 MHz, CPU Physical cores: 14, Host memory: 16364 MB
 #-----------------------------------------------------------
 source top_level.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -26,14 +26,14 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 431787
+INFO: [Synth 8-7075] Helper process launched with PID 2347503
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/lifrankfan/Apps/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1967.461 ; gain = 372.738 ; free physical = 1565 ; free virtual = 22602
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1385.226; parent = 1181.401; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 2976.195; parent = 1974.402; children = 1001.793
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1966.980 ; gain = 371.770 ; free physical = 2105 ; free virtual = 20986
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1386.242; parent = 1182.442; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2976.715; parent = 1974.922; children = 1001.793
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top_level' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'top_level' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'hex_driver' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/hex_driver.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/hex_driver.sv:11]
 INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/hex_driver.sv:11]
@@ -45,22 +45,22 @@ INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [/media/lifrankfan/Cruc
 INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/hex_driver.sv:11]
 INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/hex_driver.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'mb_block' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1082]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1758]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
@@ -80,8 +80,8 @@ INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_3PYGGY' [/media/lifra
 INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_3PYGGY' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3228]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3228]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_xbar_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1758]
 WARNING: [Synth 8-7071] port 'M07_AXI_araddr' of module 'mb_block_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1499]
 WARNING: [Synth 8-7071] port 'M07_AXI_arprot' of module 'mb_block_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1499]
@@ -96,20 +96,20 @@ WARNING: [Synth 8-7071] port 'M07_AXI_wstrb' of module 'mb_block_microblaze_0_ax
 WARNING: [Synth 8-7071] port 'M07_AXI_wvalid' of module 'mb_block_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1499]
 WARNING: [Synth 8-7023] instance 'microblaze_0_axi_periph' of module 'mb_block_microblaze_0_axi_periph_0' has 177 connections declared, but only 166 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1499]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:2994]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_dlmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3140]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3140]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_ilmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3186]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3186]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_lmb_bram_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3211]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3211]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:3211]
@@ -118,84 +118,124 @@ INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_xlconcat_0' [/me
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_xlconcat_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_xlconcat_0/synth/mb_block_microblaze_0_xlconcat_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1694]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1694]
 WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1694]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1703]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1703]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1703]
 WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1703]
 WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1703]
 WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1703]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/mb_block_axi_timer_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1732]
 WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1732]
 WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1732]
 WARNING: [Synth 8-7023] instance 'timer_usb_axi' of module 'mb_block_axi_timer_0_0' has 26 connections declared, but only 23 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1732]
 INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/synth/mb_block.v:1082]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv:98]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv:98]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/hdmi_tx_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv:91]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv:91]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/hdmi_tx_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'color_mapper' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'background_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/background/background_example.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'background_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/background_rom_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'background_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/background_rom_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'background_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/background/background_palette.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'background_palette' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/background/background_palette.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'background_example' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/background/background_example.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'peashooter_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/peashooter/peashooter_example.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'peashooter_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/peashooter_rom_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'peashooter_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/peashooter_rom_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'peashooter_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/peashooter/peashooter_palette.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'peashooter_palette' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/peashooter/peashooter_palette.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'peashooter_example' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/peashooter/peashooter_example.sv:1]
-WARNING: [Synth 8-689] width (32) of port connection 'DrawX' does not match port width (10) of module 'peashooter_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv:109]
-WARNING: [Synth 8-689] width (32) of port connection 'DrawY' does not match port width (10) of module 'peashooter_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv:110]
-INFO: [Synth 8-6157] synthesizing module 'plant' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:1]
-WARNING: [Synth 8-6090] variable 'blue' is written by both blocking and non-blocking assignments, entire logic could be removed [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:119]
-WARNING: [Synth 8-6090] variable 'green' is written by both blocking and non-blocking assignments, entire logic could be removed [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:119]
-WARNING: [Synth 8-6090] variable 'red' is written by both blocking and non-blocking assignments, entire logic could be removed [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:119]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv:88]
+INFO: [Synth 8-226] default block is never used [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv:88]
+INFO: [Synth 8-6157] synthesizing module 'background_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/background/background_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'background_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/background_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'background_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/background_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'background_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/background/background_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'background_palette' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/background/background_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'background_example' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/background/background_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'plant' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:5]
 INFO: [Synth 8-6157] synthesizing module 'plants_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/plants_sprites/plants_sprites_example.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'plants_sprites_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/plants_sprites_rom_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'plants_sprites_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-431658-pop-os/realtime/plants_sprites_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'plants_sprites_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/plants_sprites_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'plants_sprites_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/plants_sprites_rom_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'plants_sprites_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/plants_sprites/plants_sprites_palette.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'plants_sprites_palette' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/plants_sprites/plants_sprites_palette.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'plants_sprites_example' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/plants_sprites/plants_sprites_example.sv:1]
-WARNING: [Synth 8-689] width (32) of port connection 'DrawX' does not match port width (10) of module 'plants_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:189]
-WARNING: [Synth 8-689] width (32) of port connection 'DrawY' does not match port width (10) of module 'plants_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:190]
-WARNING: [Synth 8-689] width (32) of port connection 'animation' does not match port width (3) of module 'plants_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:191]
-WARNING: [Synth 8-689] width (32) of port connection 'plant' does not match port width (3) of module 'plants_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:192]
-INFO: [Synth 8-6155] done synthesizing module 'plant' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:1]
+WARNING: [Synth 8-689] width (32) of port connection 'DrawX' does not match port width (10) of module 'plants_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:300]
+WARNING: [Synth 8-689] width (32) of port connection 'DrawY' does not match port width (10) of module 'plants_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:301]
+WARNING: [Synth 8-689] width (32) of port connection 'animation' does not match port width (3) of module 'plants_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:302]
+INFO: [Synth 8-6155] done synthesizing module 'plant' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:5]
 INFO: [Synth 8-6157] synthesizing module 'cursor' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/cursor.sv:3]
-INFO: [Synth 8-155] case statement is not full and has no default [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/cursor.sv:65]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/cursor.sv:75]
 INFO: [Synth 8-6155] done synthesizing module 'cursor' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/cursor.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'AllZombies' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'zombies_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/zombies_sprites/zombies_sprites_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'zombies_sprites_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/zombies_sprites_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'zombies_sprites_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/zombies_sprites_rom_stub.v:5]
+WARNING: [Synth 8-689] width (7) of port connection 'douta' does not match port width (4) of module 'zombies_sprites_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/zombies_sprites/zombies_sprites_example.sv:44]
+INFO: [Synth 8-6157] synthesizing module 'zombies_sprites_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/zombies_sprites/zombies_sprites_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'zombies_sprites_palette' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/zombies_sprites/zombies_sprites_palette.sv:1]
+WARNING: [Synth 8-689] width (7) of port connection 'index' does not match port width (4) of module 'zombies_sprites_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/zombies_sprites/zombies_sprites_example.sv:48]
+INFO: [Synth 8-6155] done synthesizing module 'zombies_sprites_example' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/zombies_sprites/zombies_sprites_example.sv:1]
+WARNING: [Synth 8-689] width (32) of port connection 'DrawX' does not match port width (10) of module 'zombies_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:207]
+WARNING: [Synth 8-689] width (32) of port connection 'action' does not match port width (2) of module 'zombies_sprites_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:211]
+INFO: [Synth 8-6157] synthesizing module 'zombie' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/zombie.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'zombie' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/zombie.sv:5]
+WARNING: [Synth 8-689] width (4) of port connection 'ypos' does not match port width (3) of module 'zombie' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:226]
+WARNING: [Synth 8-689] width (4) of port connection 'ypos' does not match port width (3) of module 'zombie' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:246]
+WARNING: [Synth 8-689] width (4) of port connection 'ypos' does not match port width (3) of module 'zombie' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:266]
+WARNING: [Synth 8-689] width (4) of port connection 'ypos' does not match port width (3) of module 'zombie' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:306]
+INFO: [Synth 8-6155] done synthesizing module 'AllZombies' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'collisions' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/collisions.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'collisions' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/collisions.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'lost_screen_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/lost_screen/lost_screen_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'lost_screen_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/lost_screen_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'lost_screen_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/lost_screen_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lost_screen_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/lost_screen/lost_screen_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'lost_screen_palette' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/lost_screen/lost_screen_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'lost_screen_example' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/lost_screen/lost_screen_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'title_screen_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/title_screen/title_screen_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'title_screen_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/title_screen_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'title_screen_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/title_screen_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'title_screen_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/title_screen/title_screen_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'title_screen_palette' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/title_screen/title_screen_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'title_screen_example' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/title_screen/title_screen_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'win_screen_example' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/win_screen/win_screen_example.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'win_screen_rom' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/win_screen_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'win_screen_rom' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/.Xil/Vivado-2347275-pop-os/realtime/win_screen_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'win_screen_palette' [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/win_screen/win_screen_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'win_screen_palette' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/win_screen/win_screen_palette.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'win_screen_example' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/images/win_screen/win_screen_example.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'color_mapper' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'top_level' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv:14]
-WARNING: [Synth 8-7129] Port frame_clk in module cursor is either unconnected or has no load
-WARNING: [Synth 8-7129] Port game_clk[7] in module cursor is either unconnected or has no load
-WARNING: [Synth 8-7129] Port game_clk[6] in module cursor is either unconnected or has no load
-WARNING: [Synth 8-7129] Port game_clk[5] in module cursor is either unconnected or has no load
-WARNING: [Synth 8-7129] Port game_clk[4] in module cursor is either unconnected or has no load
-WARNING: [Synth 8-7129] Port game_clk[3] in module cursor is either unconnected or has no load
-WARNING: [Synth 8-7129] Port game_clk[1] in module cursor is either unconnected or has no load
-WARNING: [Synth 8-7129] Port game_clk[0] in module cursor is either unconnected or has no load
+INFO: [Synth 8-6155] done synthesizing module 'top_level' (0#1) [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/top_level.sv:2]
+WARNING: [Synth 8-87] always_comb on 'leds_reg' did not result in combinational logic [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:213]
+WARNING: [Synth 8-87] always_comb on 'leds_reg' did not result in combinational logic [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:99]
+WARNING: [Synth 8-6014] Unused sequential element wave_reg was removed.  [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv:160]
+WARNING: [Synth 8-7129] Port frame_clk in module zombie is either unconnected or has no load
+WARNING: [Synth 8-7129] Port game_clk[7] in module zombie is either unconnected or has no load
+WARNING: [Synth 8-7129] Port game_clk[6] in module zombie is either unconnected or has no load
+WARNING: [Synth 8-7129] Port game_clk[5] in module zombie is either unconnected or has no load
+WARNING: [Synth 8-7129] Port game_clk[4] in module zombie is either unconnected or has no load
+WARNING: [Synth 8-7129] Port game_clk[3] in module zombie is either unconnected or has no load
+WARNING: [Synth 8-7129] Port game_clk[2] in module zombie is either unconnected or has no load
+WARNING: [Synth 8-7129] Port game_clk[0] in module zombie is either unconnected or has no load
+WARNING: [Synth 8-7129] Port draw_active_arr[9] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port draw_active_arr[8] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port draw_active_arr[7] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port draw_active_arr[6] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port draw_active_arr[5] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hit[9] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hit[8] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hit[7] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hit[6] in module AllZombies is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hit[5] in module AllZombies is either unconnected or has no load
 WARNING: [Synth 8-7129] Port game_clk[7] in module plant is either unconnected or has no load
 WARNING: [Synth 8-7129] Port game_clk[6] in module plant is either unconnected or has no load
 WARNING: [Synth 8-7129] Port game_clk[5] in module plant is either unconnected or has no load
 WARNING: [Synth 8-7129] Port game_clk[4] in module plant is either unconnected or has no load
 WARNING: [Synth 8-7129] Port game_clk[2] in module plant is either unconnected or has no load
 WARNING: [Synth 8-7129] Port game_clk[1] in module plant is either unconnected or has no load
-WARNING: [Synth 8-7129] Port game_clk[0] in module plant is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -272,35 +312,26 @@ WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
-WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2093.367 ; gain = 498.645 ; free physical = 1604 ; free virtual = 22660
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1385.226; parent = 1181.401; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3095.164; parent = 2093.371; children = 1001.793
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2097.887 ; gain = 502.676 ; free physical = 2093 ; free virtual = 20976
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1386.242; parent = 1182.442; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3099.684; parent = 2097.891; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2108.211 ; gain = 513.488 ; free physical = 1592 ; free virtual = 22652
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1385.226; parent = 1181.401; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3110.008; parent = 2108.215; children = 1001.793
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2115.699 ; gain = 520.488 ; free physical = 2093 ; free virtual = 20976
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1386.242; parent = 1182.442; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3117.496; parent = 2115.703; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2108.211 ; gain = 513.488 ; free physical = 1592 ; free virtual = 22652
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1385.226; parent = 1181.401; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3110.008; parent = 2108.215; children = 1001.793
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2115.699 ; gain = 520.488 ; free physical = 2087 ; free virtual = 20970
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1386.242; parent = 1182.442; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3117.496; parent = 2115.703; children = 1001.793
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2108.211 ; gain = 0.000 ; free physical = 1592 ; free virtual = 22652
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2115.699 ; gain = 0.000 ; free physical = 2101 ; free virtual = 20984
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -346,10 +377,16 @@ Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/
 Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
 Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/background_rom/background_rom/background_rom_in_context.xdc] for cell 'color_instance/background_inst/background_rom'
 Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/background_rom/background_rom/background_rom_in_context.xdc] for cell 'color_instance/background_inst/background_rom'
-Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/peashooter_rom/peashooter_rom/peashooter_rom_in_context.xdc] for cell 'color_instance/peashooter_inst/peashooter_rom'
-Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/peashooter_rom/peashooter_rom/peashooter_rom_in_context.xdc] for cell 'color_instance/peashooter_inst/peashooter_rom'
 Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/plants_sprites_rom/plants_sprites_rom/plants_sprites_rom_in_context.xdc] for cell 'color_instance/plant_inst/plants_sprites_inst/plants_sprites_rom'
 Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/plants_sprites_rom/plants_sprites_rom/plants_sprites_rom_in_context.xdc] for cell 'color_instance/plant_inst/plants_sprites_inst/plants_sprites_rom'
+Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/zombies_sprites_rom/zombies_sprites_rom/zombies_sprites_rom_in_context.xdc] for cell 'color_instance/AllZombies_inst/zombies_sprites_inst/zombies_sprites_rom'
+Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/zombies_sprites_rom/zombies_sprites_rom/zombies_sprites_rom_in_context.xdc] for cell 'color_instance/AllZombies_inst/zombies_sprites_inst/zombies_sprites_rom'
+Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/title_screen_rom/title_screen_rom/title_screen_rom_in_context.xdc] for cell 'color_instance/nolabel_line252/title_screen_rom'
+Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/title_screen_rom/title_screen_rom/title_screen_rom_in_context.xdc] for cell 'color_instance/nolabel_line252/title_screen_rom'
+Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/win_screen_rom/win_screen_rom/win_screen_rom_in_context.xdc] for cell 'color_instance/nolabel_line262/win_screen_rom'
+Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/win_screen_rom/win_screen_rom/win_screen_rom_in_context.xdc] for cell 'color_instance/nolabel_line262/win_screen_rom'
+Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/lost_screen_rom/lost_screen_rom/lost_screen_rom_in_context.xdc] for cell 'color_instance/nolabel_line242/lost_screen_rom'
+Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/lost_screen_rom/lost_screen_rom/lost_screen_rom_in_context.xdc] for cell 'color_instance/nolabel_line242/lost_screen_rom'
 Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_100' completely overrides clock 'Clk'.
 New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk], [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:1]
@@ -362,29 +399,29 @@ Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs
 Finished Parsing XDC File [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2265.961 ; gain = 0.000 ; free physical = 1569 ; free virtual = 22640
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2268.449 ; gain = 0.000 ; free physical = 2099 ; free virtual = 20982
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2265.961 ; gain = 0.000 ; free physical = 1569 ; free virtual = 22640
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2268.449 ; gain = 0.000 ; free physical = 2099 ; free virtual = 20982
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/lifrankfan/Apps/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1553 ; free virtual = 22694
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1385.226; parent = 1181.401; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 2172 ; free virtual = 21037
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1451.230; parent = 1247.441; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1553 ; free virtual = 22694
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1385.226; parent = 1181.401; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 2172 ; free virtual = 21037
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1451.230; parent = 1247.441; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -430,52 +467,92 @@ Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/gpio_usb_keycode. (con
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/timer_usb_axi. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/spi_usb. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for color_instance/background_inst/background_rom. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for color_instance/peashooter_inst/peashooter_rom. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for color_instance/plant_inst/plants_sprites_inst/plants_sprites_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for color_instance/AllZombies_inst/zombies_sprites_inst/zombies_sprites_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for color_instance/nolabel_line252/title_screen_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for color_instance/nolabel_line262/win_screen_rom. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for color_instance/nolabel_line242/lost_screen_rom. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1573 ; free virtual = 22714
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1385.226; parent = 1181.401; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 2177 ; free virtual = 21042
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1451.230; parent = 1247.441; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3936] Found unconnected internal register 'sunflowers_reg' and it is trimmed from '8' to '4' bits. [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:49]
+INFO: [Synth 8-802] inferred FSM for state register 'game_state_reg' in module 'color_mapper'
+WARNING: [Synth 8-327] inferring latch for variable 'leds_reg' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:213]
+WARNING: [Synth 8-327] inferring latch for variable 'leds_reg' [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv:99]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   title |                               00 |                               00
+                    game |                               01 |                               01
+                    lose |                               10 |                               10
+                     win |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'game_state_reg' using encoding 'sequential' in module 'color_mapper'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1558 ; free virtual = 22810
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1385.226; parent = 1181.401; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 2170 ; free virtual = 21037
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1451.230; parent = 1247.441; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   3 Input   33 Bit       Adders := 2     
 	   2 Input   32 Bit       Adders := 9     
-	   3 Input   12 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   25 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 1     
+	   3 Input   12 Bit       Adders := 5     
 	   2 Input   11 Bit       Adders := 2     
-	   2 Input   10 Bit       Adders := 2     
+	   3 Input   11 Bit       Adders := 6     
+	   2 Input   10 Bit       Adders := 8     
+	   3 Input   10 Bit       Adders := 6     
 	   2 Input    8 Bit       Adders := 3     
-	   3 Input    8 Bit       Adders := 1     
-	  45 Input    7 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 3     
-	   2 Input    3 Bit       Adders := 2     
+	  45 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 7     
+	   2 Input    3 Bit       Adders := 5     
+	   2 Input    2 Bit       Adders := 2     
 +---Registers : 
-	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 3     
-	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 12    
-	                3 Bit    Registers := 46    
-	                1 Bit    Registers := 50    
+	               25 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 9     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 76    
+	                3 Bit    Registers := 52    
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 55    
++---Multipliers : 
+	               6x32  Multipliers := 1     
 +---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	   3 Input   25 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 7     
+	   4 Input   12 Bit        Muxes := 2     
+	   8 Input   12 Bit        Muxes := 1     
 	   4 Input    8 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 2     
-	   5 Input    4 Bit        Muxes := 13    
-	   2 Input    4 Bit        Muxes := 44    
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 63    
 	   6 Input    4 Bit        Muxes := 1     
 	  10 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 5     
+	   2 Input    3 Bit        Muxes := 5     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 13    
 	  10 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 559   
+	   3 Input    2 Bit        Muxes := 5     
+	   4 Input    2 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 621   
 	  10 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -492,29 +569,54 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP rom_address1, operation Mode is: A*(B:0x1e0).
-DSP Report: operator rom_address1 is absorbed into DSP rom_address1.
-DSP Report: Generating DSP rom_address2, operation Mode is: A*(B:0x140).
+DSP Report: Generating DSP rom_address2, operation Mode is: A*(B:0x78).
 DSP Report: operator rom_address2 is absorbed into DSP rom_address2.
-DSP Report: Generating DSP rom_address, operation Mode is: C+A*(B:0x1e0).
-DSP Report: operator rom_address is absorbed into DSP rom_address.
-DSP Report: operator rom_address0 is absorbed into DSP rom_address.
-DSP Report: Generating DSP rom_address1, operation Mode is: A*(B:0x161).
+DSP Report: Generating DSP rom_address1, operation Mode is: A*(B:0x140).
 DSP Report: operator rom_address1 is absorbed into DSP rom_address1.
-DSP Report: Generating DSP rom_address, operation Mode is: PCIN+(A:0x0):B+(C:0x32).
-DSP Report: operator rom_address is absorbed into DSP rom_address.
 DSP Report: Generating DSP rom_address, operation Mode is: C+(A:0x3000)*B.
 DSP Report: operator rom_address is absorbed into DSP rom_address.
 DSP Report: operator rom_address0 is absorbed into DSP rom_address.
 DSP Report: Generating DSP rom_address, operation Mode is: PCIN+A*(B:0x180).
 DSP Report: operator rom_address is absorbed into DSP rom_address.
 DSP Report: operator rom_address2 is absorbed into DSP rom_address.
+DSP Report: Generating DSP rng_seed0, operation Mode is: A*B+1.
+DSP Report: operator rng_seed0 is absorbed into DSP rng_seed0.
+DSP Report: operator rng_seed1 is absorbed into DSP rng_seed0.
+DSP Report: Generating DSP zombies_sprites_inst/rom_address1, operation Mode is: (A:0xc0)*B.
+DSP Report: operator zombies_sprites_inst/rom_address1 is absorbed into DSP zombies_sprites_inst/rom_address1.
+DSP Report: Generating DSP zombies_sprites_inst/rom_address, operation Mode is: PCIN+(A:0x9000)*B.
+DSP Report: operator zombies_sprites_inst/rom_address is absorbed into DSP zombies_sprites_inst/rom_address.
+DSP Report: operator zombies_sprites_inst/rom_address0 is absorbed into DSP zombies_sprites_inst/rom_address.
+DSP Report: Generating DSP zombies_sprites_inst/rom_address, operation Mode is: PCIN+(A:0x30)*B2.
+DSP Report: register animation_reg is absorbed into DSP zombies_sprites_inst/rom_address.
+DSP Report: operator zombies_sprites_inst/rom_address is absorbed into DSP zombies_sprites_inst/rom_address.
+DSP Report: operator zombies_sprites_inst/rom_address2 is absorbed into DSP zombies_sprites_inst/rom_address.
+DSP Report: Generating DSP zombies_sprites_inst/rom_address, operation Mode is: PCIN+A*(B:0x240).
+DSP Report: operator zombies_sprites_inst/rom_address is absorbed into DSP zombies_sprites_inst/rom_address.
+DSP Report: operator zombies_sprites_inst/rom_address3 is absorbed into DSP zombies_sprites_inst/rom_address.
+DSP Report: Generating DSP rom_address2, operation Mode is: A*(B:0x78).
+DSP Report: operator rom_address2 is absorbed into DSP rom_address2.
+DSP Report: Generating DSP rom_address1, operation Mode is: A*(B:0x140).
+DSP Report: operator rom_address1 is absorbed into DSP rom_address1.
+DSP Report: Generating DSP rom_address2, operation Mode is: A*(B:0x78).
+DSP Report: operator rom_address2 is absorbed into DSP rom_address2.
+DSP Report: Generating DSP rom_address1, operation Mode is: A*(B:0x140).
+DSP Report: operator rom_address1 is absorbed into DSP rom_address1.
+DSP Report: Generating DSP rom_address2, operation Mode is: A*(B:0x78).
+DSP Report: operator rom_address2 is absorbed into DSP rom_address2.
+DSP Report: Generating DSP rom_address1, operation Mode is: A*(B:0x140).
+DSP Report: operator rom_address1 is absorbed into DSP rom_address1.
 WARNING: [Synth 8-3917] design top_level has port hex_segA[7] driven by constant 1
 WARNING: [Synth 8-3917] design top_level has port hex_segB[7] driven by constant 1
+WARNING: [Synth 8-3332] Sequential element (leds_reg[13]) is unused and will be removed from module AllZombies.
+WARNING: [Synth 8-3332] Sequential element (leds_reg[12]) is unused and will be removed from module AllZombies.
+WARNING: [Synth 8-3332] Sequential element (leds_reg[11]) is unused and will be removed from module AllZombies.
+WARNING: [Synth 8-3332] Sequential element (leds_reg[10]) is unused and will be removed from module AllZombies.
+WARNING: [Synth 8-3332] Sequential element (leds_reg[9]) is unused and will be removed from module AllZombies.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 664 ; free virtual = 22834
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1445.886; parent = 1242.104; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 2146 ; free virtual = 21019
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1519.433; parent = 1315.675; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -524,25 +626,31 @@ ROM: Preliminary Mapping Report
 +-----------------------+--------------------------------+---------------+----------------+
 |Module Name            | RTL Object                     | Depth x Width | Implemented As | 
 +-----------------------+--------------------------------+---------------+----------------+
-|background_palette     | palette                        | 32x12         | LUT            | 
 |plants_sprites_palette | palette                        | 128x12        | LUT            | 
-|background_example     | background_palette/palette     | 32x12         | LUT            | 
 |plants_sprites_example | plants_sprites_palette/palette | 128x12        | LUT            | 
 +-----------------------+--------------------------------+---------------+----------------+
 
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+-----------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name            | DSP Mapping             | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-----------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|background_example     | A*(B:0x1e0)             | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|background_example     | A*(B:0x140)             | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|background_example     | C+A*(B:0x1e0)           | 11     | 9      | 10     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|peashooter_example     | A*(B:0x161)             | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|peashooter_example     | PCIN+(A:0x0):B+(C:0x32) | 30     | 10     | 6      | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|plants_sprites_example | C+(A:0x3000)*B          | 3      | 14     | 10     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|plants_sprites_example | PCIN+A*(B:0x180)        | 10     | 9      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+-----------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name             | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|background_example      | A*(B:0x78)        | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|background_example      | A*(B:0x140)       | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|plants_sprites_example  | C+(A:0x3000)*B    | 3      | 14     | 10     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|plants_sprites_example  | PCIN+A*(B:0x180)  | 10     | 9      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|AllZombies              | A*B+1             | 10     | 7      | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|zombies_sprites_example | (A:0xc0)*B        | 2      | 8      | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|zombies_sprites_example | PCIN+(A:0x9000)*B | 16     | 2      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|AllZombies              | PCIN+(A:0x30)*B2  | 6      | 2      | -      | -      | 18     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|zombies_sprites_example | PCIN+A*(B:0x240)  | 10     | 10     | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|lost_screen_example     | A*(B:0x78)        | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|lost_screen_example     | A*(B:0x140)       | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|title_screen_example    | A*(B:0x78)        | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|title_screen_example    | A*(B:0x140)       | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|win_screen_example      | A*(B:0x78)        | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|win_screen_example      | A*(B:0x140)       | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -553,126 +661,25 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'Clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 467 ; free virtual = 22715
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1545.009; parent = 1341.226; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1888 ; free virtual = 20760
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1557.913; parent = 1354.155; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1147 ; free virtual = 22703
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1552.169; parent = 1348.386; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1882 ; free virtual = 20755
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1565.198; parent = 1361.440; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[7][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[7][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[7][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[7][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[7][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[7][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[7][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[7][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[8][0][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[8][0][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[8][0][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[8][0][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[8][0][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[8][0][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[8][0][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[8][0][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[7][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[7][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[7][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[7][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[7][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[7][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[7][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[7][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[8][1][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[8][1][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[8][1][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[8][1][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[8][1][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[8][1][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[8][1][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[8][1][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][2][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][2][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][2][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][2][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][2][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][2][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[0][2][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[0][2][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][2][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][2][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][2][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][2][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][2][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][2][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[1][2][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[1][2][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][2][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][2][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][2][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][2][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][2][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][2][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[2][2][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[2][2][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][2][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][2][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][2][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][2][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][2][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][2][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[3][2][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[3][2][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][2][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][2][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][2][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][2][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][2][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][2][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[4][2][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[4][2][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][2][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][2][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][2][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][2][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][2][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][2][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[5][2][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[5][2][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][2][3] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][2][3]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][2][2] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][2][2]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][2][1] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][2][1]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Synth 8-5966] Removing register instance (\color_instance/plant_inst/health_reg[6][2][0] ) from module (top_level) as it has self-loop and (\color_instance/plant_inst/health_reg[6][2][0]__0 ) is actual driver [/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/plant.sv:126]
-INFO: [Common 17-14] Message 'Synth 8-5966' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1336 ; free virtual = 22661
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1556.966; parent = 1353.183; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1910 ; free virtual = 20783
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1572.796; parent = 1369.038; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -690,66 +697,74 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1461 ; free virtual = 22632
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1557.220; parent = 1353.437; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1955 ; free virtual = 20828
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1572.808; parent = 1369.050; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1412 ; free virtual = 22635
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1557.235; parent = 1353.452; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1955 ; free virtual = 20828
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1572.808; parent = 1369.050; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1100 ; free virtual = 22638
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1557.360; parent = 1353.577; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1955 ; free virtual = 20828
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1572.960; parent = 1369.202; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 1019 ; free virtual = 22639
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1557.423; parent = 1353.640; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1955 ; free virtual = 20828
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1573.022; parent = 1369.265; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 802 ; free virtual = 22636
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1557.423; parent = 1353.640; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1955 ; free virtual = 20828
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1573.022; parent = 1369.265; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 793 ; free virtual = 22637
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1557.423; parent = 1353.640; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1964 ; free virtual = 20837
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1573.022; parent = 1369.265; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name            | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|background_example     | A*B         | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|background_example     | A*B         | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|background_example     | C+A*B       | 11     | 9      | 10     | -      | 18     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|peashooter_example     | A*B         | 5      | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|peashooter_example     | PCIN+A:B+C  | 0      | 5      | -      | -      | 14     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|plants_sprites_example | C+A*B       | 3      | 14     | 9      | -      | 0      | 0    | 0    | 0    | -    | -     | 0    | 0    | 
-|plants_sprites_example | PCIN+A*B    | 5      | 9      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name             | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|AllZombies              | A*B+1       | 10     | 7      | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|zombies_sprites_example | A*B         | 2      | 8      | -      | -      | 0      | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|zombies_sprites_example | PCIN+A*B    | 16     | 2      | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|AllZombies              | PCIN+A*B'   | 6      | 2      | -      | -      | 0      | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|zombies_sprites_example | PCIN+A*B    | 10     | 10     | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|background_example      | A*B         | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|background_example      | A*B         | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|lost_screen_example     | A*B         | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|lost_screen_example     | A*B         | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|title_screen_example    | A*B         | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|title_screen_example    | A*B         | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|win_screen_example      | A*B         | 10     | 7      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|win_screen_example      | A*B         | 10     | 9      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|plants_sprites_example  | C+A*B       | 2      | 14     | 9      | -      | 0      | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|plants_sprites_example  | PCIN+A*B    | 5      | 9      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -775,9 +790,12 @@ Report BlackBoxes:
 |17    |mb_block_lmb_bram_0              |         1|
 |18    |clk_wiz_0                        |         1|
 |19    |hdmi_tx_0                        |         1|
-|20    |background_rom                   |         1|
-|21    |peashooter_rom                   |         1|
-|22    |plants_sprites_rom               |         1|
+|20    |zombies_sprites_rom              |         1|
+|21    |background_rom                   |         1|
+|22    |lost_screen_rom                  |         1|
+|23    |title_screen_rom                 |         1|
+|24    |win_screen_rom                   |         1|
+|25    |plants_sprites_rom               |         1|
 +------+---------------------------------+----------+
 
 Report Cell Usage: 
@@ -787,62 +805,71 @@ Report Cell Usage:
 |1     |background_rom                 |     1|
 |2     |clk_wiz                        |     1|
 |3     |hdmi_tx                        |     1|
-|4     |mb_block_axi_gpio_0            |     3|
-|7     |mb_block_axi_quad_spi_0        |     1|
-|8     |mb_block_axi_timer_0           |     1|
-|9     |mb_block_axi_uartlite_0        |     1|
-|10    |mb_block_clk_wiz_1             |     1|
-|11    |mb_block_dlmb_bram_if_cntlr    |     1|
-|12    |mb_block_dlmb_v10              |     1|
-|13    |mb_block_ilmb_bram_if_cntlr    |     1|
-|14    |mb_block_ilmb_v10              |     1|
-|15    |mb_block_lmb_bram              |     1|
-|16    |mb_block_mdm_1                 |     1|
-|17    |mb_block_microblaze_0          |     1|
-|18    |mb_block_microblaze_0_axi_intc |     1|
-|19    |mb_block_rst_clk_wiz_1_100M    |     1|
-|20    |mb_block_xbar                  |     1|
-|21    |peashooter_rom                 |     1|
+|4     |lost_screen_rom                |     1|
+|5     |mb_block_axi_gpio_0            |     3|
+|8     |mb_block_axi_quad_spi_0        |     1|
+|9     |mb_block_axi_timer_0           |     1|
+|10    |mb_block_axi_uartlite_0        |     1|
+|11    |mb_block_clk_wiz_1             |     1|
+|12    |mb_block_dlmb_bram_if_cntlr    |     1|
+|13    |mb_block_dlmb_v10              |     1|
+|14    |mb_block_ilmb_bram_if_cntlr    |     1|
+|15    |mb_block_ilmb_v10              |     1|
+|16    |mb_block_lmb_bram              |     1|
+|17    |mb_block_mdm_1                 |     1|
+|18    |mb_block_microblaze_0          |     1|
+|19    |mb_block_microblaze_0_axi_intc |     1|
+|20    |mb_block_rst_clk_wiz_1_100M    |     1|
+|21    |mb_block_xbar                  |     1|
 |22    |plants_sprites_rom             |     1|
-|23    |CARRY4                         |   257|
-|24    |DSP48E1                        |     7|
-|27    |LUT1                           |   157|
-|28    |LUT2                           |   355|
-|29    |LUT3                           |   379|
-|30    |LUT4                           |   295|
-|31    |LUT5                           |   358|
-|32    |LUT6                           |  1085|
-|33    |MUXF7                          |    16|
-|34    |FDCE                           |    28|
-|35    |FDRE                           |   435|
-|36    |IBUF                           |     4|
-|37    |OBUF                           |    29|
+|23    |title_screen_rom               |     1|
+|24    |win_screen_rom                 |     1|
+|25    |zombies_sprites_rom            |     1|
+|26    |BUFG                           |     1|
+|27    |CARRY4                         |   412|
+|28    |DSP48E1                        |    15|
+|31    |LUT1                           |   175|
+|32    |LUT2                           |   671|
+|33    |LUT3                           |   477|
+|34    |LUT4                           |   528|
+|35    |LUT5                           |   621|
+|36    |LUT6                           |   970|
+|37    |MUXF7                          |    33|
+|38    |MUXF8                          |     1|
+|39    |FDCE                           |    22|
+|40    |FDRE                           |   592|
+|41    |FDSE                           |    58|
+|42    |LD                             |     2|
+|43    |IBUF                           |     4|
+|44    |OBUF                           |    38|
+|45    |OBUFT                          |     7|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 793 ; free virtual = 22637
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1557.485; parent = 1353.702; children = 203.824
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3235.742; parent = 2233.949; children = 1001.793
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 1964 ; free virtual = 20837
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1573.101; parent = 1369.343; children = 203.800
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3270.246; parent = 2268.453; children = 1001.793
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 38 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 2265.961 ; gain = 513.488 ; free physical = 593 ; free virtual = 22682
-Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 2265.961 ; gain = 671.238 ; free physical = 543 ; free virtual = 22680
+Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 2268.449 ; gain = 520.488 ; free physical = 2021 ; free virtual = 20894
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2268.449 ; gain = 673.238 ; free physical = 2021 ; free virtual = 20894
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2265.961 ; gain = 0.000 ; free physical = 781 ; free virtual = 22787
-INFO: [Netlist 29-17] Analyzing 280 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2268.449 ; gain = 0.000 ; free physical = 2134 ; free virtual = 21006
+INFO: [Netlist 29-17] Analyzing 463 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2265.961 ; gain = 0.000 ; free physical = 1099 ; free virtual = 22770
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2268.449 ; gain = 0.000 ; free physical = 2091 ; free virtual = 20964
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
 
-Synth Design complete, checksum: 3e0c950d
+Synth Design complete, checksum: 26b51889
 INFO: [Common 17-83] Releasing license: Synthesis
-234 Infos, 151 Warnings, 1 Critical Warnings and 0 Errors encountered.
+161 Infos, 162 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 2265.961 ; gain = 992.207 ; free physical = 969 ; free virtual = 22991
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 2268.449 ; gain = 932.426 ; free physical = 2272 ; free virtual = 21143
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.runs/synth_1/top_level.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu May  2 18:49:38 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat May  4 04:14:58 2024...

@@ -452,3 +452,159 @@ platform generate
 platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
 platform clean
 platform generate
+platform active {top_level}
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform active {top_level}
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains standalone_microblaze_0 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform active {top_level}
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform generate -domains 
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate
+platform config -updatehw {/media/lifrankfan/CrucialX6/PlantsVsZombie/top_level.xsa}
+platform clean
+platform generate

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1714693709">
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1714814019">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="top_level_postroute_physopted.rqs"/>
@@ -120,19 +120,29 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/background/background_example.sv">
+    <File Path="$PSRCDIR/sources_1/new/all_zombies.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/images/background/background_example.sv"/>
-        <Attr Name="ImportTime" Val="1714191997"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/background/background_palette.sv">
+    <File Path="$PPRDIR/images/background/background_example.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/images/background/background_palette.sv"/>
-        <Attr Name="ImportTime" Val="1714191997"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/background/background_palette.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/collisions.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -154,14 +164,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/images/peashooter/peashooter_example.sv">
+    <File Path="$PPRDIR/images/lost_screen/lost_screen_example.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/images/peashooter/peashooter_palette.sv">
+    <File Path="$PPRDIR/images/lost_screen/lost_screen_palette.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -189,6 +199,55 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/images/title_screen/title_screen_example.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/title_screen/title_screen_palette.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/win_screen/win_screen_example.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/win_screen/win_screen_palette.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/zombie.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/zombies_sprites/zombies_sprites_example.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/zombies_sprites/zombies_sprites_palette.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/design_source/top_level.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -196,7 +255,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../../home/lifrankfan/Downloads/lab6_2_provided/design_source/ball.sv">
+    <File Path="$PGENDIR/sources_1/bd/mb_block/hdl/mb_block_wrapper.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -204,7 +263,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PGENDIR/sources_1/bd/mb_block/hdl/mb_block_wrapper.v">
+    <File Path="$PPRDIR/../../../../home/lifrankfan/Downloads/lab6_2_provided/design_source/ball.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -230,33 +289,33 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/zombie.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/images/plants_sprites/plants_sprites.COE">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/collisions.sv">
+    <File Path="$PPRDIR/images/zombies_sprites/zombies_sprites.COE">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/all_zombies.sv">
+    <File Path="$PPRDIR/images/title_screen/title_screen.COE">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/win_screen/win_screen.COE">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/lost_screen/lost_screen.COE">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -305,24 +364,27 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="plants_sprites_rom"/>
-  <BlockFileSet Type="BlockSrcs" Name="peashooter_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="lost_screen_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="win_screen_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="title_screen_rom"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_rst_clk_wiz_1_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_mdm_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="background_rom"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="zombies_sprites_rom"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="plants_sprites_rom"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_dlmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_microblaze_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_uartlite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_microblaze_0_axi_intc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="background_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_ilmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_lmb_bram_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_microblaze_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_ilmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_dlmb_bram_if_cntlr_0"/>
 </GenRun>

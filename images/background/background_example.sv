@@ -5,8 +5,8 @@ module background_example (
 	output logic [3:0] red, green, blue
 );
 
-logic [17:0] rom_address;
-logic [4:0] rom_q;
+logic [15:0] rom_address;
+logic [3:0] rom_q;
 
 logic [3:0] palette_red, palette_green, palette_blue;
 
@@ -17,7 +17,7 @@ assign negedge_vga_clk = ~vga_clk;
 
 // address into the rom = (x*xDim)/640 + ((y*yDim)/480) * xDim
 // this will stretch out the sprite across the entire screen
-assign rom_address = ((DrawX * 480) / 640) + (((DrawY * 320) / 480) * 480);
+assign rom_address = ((DrawX * 320) / 640) + (((DrawY * 120) / 480) * 320);
 
 always_ff @ (posedge vga_clk) begin
 	red <= 4'h0;

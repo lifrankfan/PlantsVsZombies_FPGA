@@ -1,4 +1,4 @@
-18:55:14 **** Build of configuration Debug for project PlantsVsZombies ****
+04:19:25 **** Build of configuration Debug for project PlantsVsZombies ****
 make all 
 Building file: ../src/lw_usb/HID.c
 Invoking: MicroBlaze gcc compiler
@@ -83,5 +83,5 @@ mb-size PlantsVsZombies.elf  |tee "PlantsVsZombies.elf.size"
 Finished building: PlantsVsZombies.elf.size
  
 
-18:55:15 Build Finished (took 1s.385ms)
+04:19:26 Build Finished (took 937ms)
 

@@ -1,15 +1,3 @@
-//-------------------------------------------------------------------------
-//    mb_usb_hdmi_top.sv                                                 --
-//    Zuofu Cheng                                                        --
-//    2-29-24                                                            --
-//                                                                       --
-//                                                                       --
-//    Spring 2024 Distribution                                           --
-//                                                                       --
-//    For use with ECE 385 USB + HDMI                                    --
-//    University of Illinois ECE Department                              --
-//-------------------------------------------------------------------------
-
 
 module top_level(
     input logic Clk,
@@ -37,15 +25,20 @@ module top_level(
     output logic [7:0] hex_segA,
     output logic [3:0] hex_gridA,
     output logic [7:0] hex_segB,
-    output logic [3:0] hex_gridB
+    output logic [3:0] hex_gridB,
+    
+    //LED
+    output logic [15:0]leds
 );
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
     logic locked;
     logic [9:0] drawX, drawY;
-    
-    logic hsync, vsync, vde;
+    // , ballxsig, ballysig, ballsizesig;
+
+
+    logic hsync, vsync, vsync_pre, vde;
     logic [3:0] red, green, blue;
     logic reset_ah;
     logic [15:0] gpio_hex;
@@ -159,6 +152,7 @@ module top_level(
         .Red(red),
         .Green(green),
         .Blue(blue),
+        .leds(leds),
         .gpio_hex(gpio_hex)
     );
     

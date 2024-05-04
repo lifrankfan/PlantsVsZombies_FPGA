@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../PlantsVsZombie.gen/sources_1/ip/lost_screen_rom/sim/lost_screen_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

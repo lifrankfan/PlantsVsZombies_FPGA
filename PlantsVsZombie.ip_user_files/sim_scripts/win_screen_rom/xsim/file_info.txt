@@ -1,0 +1,2 @@
+win_screen_rom.v,verilog,xil_defaultlib,../../../../PlantsVsZombie.gen/sources_1/ip/win_screen_rom/sim/win_screen_rom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
