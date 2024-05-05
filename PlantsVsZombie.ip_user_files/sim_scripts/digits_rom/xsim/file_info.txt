@@ -1,0 +1,2 @@
+digits_rom.v,verilog,xil_defaultlib,../../../../PlantsVsZombie.gen/sources_1/ip/digits_rom/sim/digits_rom.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

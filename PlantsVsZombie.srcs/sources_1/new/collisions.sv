@@ -23,9 +23,14 @@
 module collisions(
     input logic [9:0]  zomb_draw_active_arr,
     input logic plant_draw_active,
+    input logic peaactive,
+    input logic pea_draw_active_arr [9][5],
+    input logic pea_type,
     
     output logic plant_hit,
-    output logic [9:0] zomb_plant_hit
+    output logic [9:0] zomb_plant_hit,
+    output logic [1:0] zomb_pea_hit [10],
+    output logic zomb_hit[9][5]
     );
     
     always_comb
@@ -45,5 +50,20 @@ module collisions(
                                         zomb_draw_active_arr[2] |
                                         zomb_draw_active_arr[3] |
                                         zomb_draw_active_arr[4]);
+    end
+    
+    always_comb
+    begin
+        zomb_pea_hit[0] = {pea_type, zomb_draw_active_arr[0] && peaactive};
+        zomb_pea_hit[1] = {pea_type, zomb_draw_active_arr[1] && peaactive};
+        zomb_pea_hit[2] = {pea_type, zomb_draw_active_arr[2] && peaactive};
+        zomb_pea_hit[3] = {pea_type, zomb_draw_active_arr[3] && peaactive};
+        zomb_pea_hit[4] = {pea_type, zomb_draw_active_arr[4] && peaactive};
+        zomb_pea_hit[5] = {pea_type, zomb_draw_active_arr[5] && peaactive};
+        zomb_pea_hit[6] = {pea_type, zomb_draw_active_arr[6] && peaactive};
+        zomb_pea_hit[7] = {pea_type, zomb_draw_active_arr[7] && peaactive};
+        zomb_pea_hit[8] = {pea_type, zomb_draw_active_arr[8] && peaactive};
+        zomb_pea_hit[9] = {pea_type, zomb_draw_active_arr[9] && peaactive};
+
     end
 endmodule

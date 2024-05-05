@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1714814019">
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1714880427">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="top_level_postroute_physopted.rqs"/>
@@ -102,6 +102,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/AllPeas.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../home/lifrankfan/Downloads/AllPeas.sv"/>
+        <Attr Name="ImportTime" Val="1714702848"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/design_source/Color_Mapper.sv">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../home/lifrankfan/Downloads/lab6_2_provided/design_source/Color_Mapper.sv"/>
@@ -115,6 +124,15 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../home/lifrankfan/Downloads/lab6_2_provided/design_source/VGA_controller.sv"/>
         <Attr Name="ImportTime" Val="1702797402"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/all_peas_new.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../home/lifrankfan/Downloads/all_peas_new.sv"/>
+        <Attr Name="ImportTime" Val="1714879957"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -149,6 +167,20 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/cursor.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/digits/digits_example.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/images/digits/digits_palette.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -319,6 +351,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/images/digits/digits.COE">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top_level"/>
@@ -364,6 +402,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="digits_rom"/>
   <BlockFileSet Type="BlockSrcs" Name="lost_screen_rom"/>
   <BlockFileSet Type="BlockSrcs" Name="win_screen_rom"/>
   <BlockFileSet Type="BlockSrcs" Name="title_screen_rom"/>

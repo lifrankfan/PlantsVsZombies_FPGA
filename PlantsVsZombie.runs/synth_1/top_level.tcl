@@ -97,14 +97,19 @@ add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/zombies_sprites/zomb
 add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/title_screen/title_screen.COE
 add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/win_screen/win_screen.COE
 add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/lost_screen/lost_screen.COE
+add_files /media/lifrankfan/CrucialX6/PlantsVsZombie/images/digits/digits.COE
 read_verilog -library xil_defaultlib -sv {
+  /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/Downloads/AllPeas.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/Color_Mapper.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/VGA_controller.sv
+  /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/Downloads/all_peas_new.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/all_zombies.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/images/background/background_example.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/images/background/background_palette.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/collisions.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/new/cursor.sv
+  /media/lifrankfan/CrucialX6/PlantsVsZombie/images/digits/digits_example.sv
+  /media/lifrankfan/CrucialX6/PlantsVsZombie/images/digits/digits_palette.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/imports/design_source/hex_driver.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/images/lost_screen/lost_screen_example.sv
   /media/lifrankfan/CrucialX6/PlantsVsZombie/images/lost_screen/lost_screen_palette.sv
@@ -186,6 +191,9 @@ set_property used_in_implementation false [get_files -all /media/lifrankfan/Cruc
 
 read_ip -quiet /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/ip/lost_screen_rom/lost_screen_rom.xci
 set_property used_in_implementation false [get_files -all /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/lost_screen_rom/lost_screen_rom_ooc.xdc]
+
+read_ip -quiet /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.srcs/sources_1/ip/digits_rom/digits_rom.xci
+set_property used_in_implementation false [get_files -all /media/lifrankfan/CrucialX6/PlantsVsZombie/PlantsVsZombie.gen/sources_1/ip/digits_rom/digits_rom_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,24 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 04/30/2024 09:21:16 PM
-// Design Name: 
-// Module Name: AllZombies
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module AllZombies(
     input  logic        Reset, 
@@ -30,13 +9,15 @@ module AllZombies(
     input  logic        soft_reset,
     input  logic        frame_clk,
     input  logic [7:0]  game_clk,
+    input  logic [1:0]  zomb_pea_hit [10],
 
     output logic [3:0]  red,
     output logic [3:0]  green,
     output logic [3:0]  blue,
     output logic [9:0]  draw_active_arr,
     output logic [15:0] leds,
-    output logic        lose
+    output logic [9:0]  rightZomb[5],
+    output logic        zomb_end
     );
     
     parameter [7:0] tile_x_offset=147;
@@ -68,14 +49,11 @@ module AllZombies(
     logic [1:0]  animation;
     logic [1:0]  action_arr[zomb_num]; // 1: walking, 2: eating, 3: dying
     logic [1:0]  action;
-    logic        lose_;
     
-    assign lose = lose_;
-    
-    logic        right_most_zomb_reg [5];
+   
     
     assign draw_active_arr = draw_active_arr_local;
-    assign leds[5] = zomb_spawn_arr[0];
+    
     
      //ZOMBIE COUNTER implement random spawn timings
      always_ff @(posedge game_clk[1])
@@ -83,7 +61,6 @@ module AllZombies(
         zombie_spawn_count <= zombie_spawn_count + 1;
         if (zombie_spawn_count == 10'd100 || soft_reset) begin
             zombie_spawn_count <=10'd0;
-            leds[14] = 1;
         end
      end
      
@@ -96,23 +73,18 @@ module AllZombies(
         if (zombie_spawn_count == 10'd100) begin
             if (zomb_alive[0] == 1'b0) begin
                 zomb_spawn_arr[0] = 1'b1;
-                leds[13] = 1;
             end 
             else if (zomb_alive[1] == 1'b0) begin
                 zomb_spawn_arr[1] = 1'b1;
-                leds[12] = 1;
             end 
             else if (zomb_alive[2] == 1'b0) begin
                 zomb_spawn_arr[2] = 1'b1;
-                leds[11] = 1;
             end 
             else if (zomb_alive[3] == 1'b0) begin
                 zomb_spawn_arr[3] = 1'b1;
-                leds[10] = 1;
             end 
             else if (zomb_alive[4] == 1'b0) begin
                 zomb_spawn_arr[4] = 1'b1;
-                leds[9] = 1;
             end
         end
      end
@@ -123,19 +95,38 @@ module AllZombies(
             ypos_rand<=3'd3;
         end else begin
             rng_seed <= (rng_seed * rng_seed[9:3]) + 1;
-            ypos_rand<=rng_seed%5;
-        end
-     end
-     
-     always_comb
-     begin
-        lose_ = 1'b0;
-        if (zomb_x == 10'd130) begin
-            lose_ = 1'b1;
+            ypos_rand<=rng_seed%5;;
+            
         end
      end
      
      assign zomb_y = zomb_y_reg * tile_height + tile_y_offset;
+     
+     //Get right most zombie in each row
+     always_comb
+     begin
+        integer row, zombnum;
+        for (row = 0; row < 5; row = row + 1) begin
+            rightZomb[row] = 10'd100; // default if there is no zombie on that row
+            for (zombnum = 0; zombnum < 5; zombnum = zombnum +1) begin
+                if (rightZomb[row] < Xpos[zombnum] && Xpos[zombnum] < 600 && Yrow[zombnum] == row) begin
+                    rightZomb[row] = Xpos[zombnum];
+                end 
+            end
+        end
+     end
+     
+     logic zomb_reg;
+     assign zomb_end = zomb_reg;
+     always_ff @(posedge pixel_clk)
+     begin
+        if (Reset || soft_reset) begin
+            zomb_reg <= 1'b0;
+        end else
+        if (zomb_x < tile_x_offset && zomb_x!= 10'b0) begin
+            zomb_reg <= 1'b1;    
+        end
+     end
      
      always_comb
      begin: zombie_to_rom
@@ -143,7 +134,6 @@ module AllZombies(
         zomb_y_reg = Yrow[4];
         zomb_inst = 4'd4;
         zomb_code = zomb_code_arr[4];
-        action = 2'b0;
         if (draw_active_arr_local[0] == 1'b1) 
         begin
             zomb_x = Xpos[0];
@@ -192,8 +182,6 @@ module AllZombies(
             draw_active_arr_local[3] == 1'b1 ||
             draw_active_arr_local[4] == 1'b1 ) begin
             {red, green, blue} = {zomb_r, zomb_g, zomb_b};
-            //{red, green, blue} = 12'h00F;
-//            leds[15] = 1;
         end
      end
      
@@ -201,6 +189,8 @@ module AllZombies(
     begin: animation_sequence
         animation <= animation + 1;
     end
+    
+
 
 zombies_sprites_example zombies_sprites_inst(
 	.vga_clk(pixel_clk),
@@ -226,7 +216,7 @@ zombie zomb_inst_1 (
     .ypos(ypos_rand),
     .DrawX(DrawX),
     .DrawY(DrawY),
-    .pea_hit(0),
+    .pea_hit(zomb_pea_hit[0]),
     .plant_hit(hit[0]),
     .Xpos(Xpos[0]),
     .Ypos_out(Yrow[0]),
@@ -246,7 +236,7 @@ zombie zomb_inst_2 (
     .ypos(ypos_rand),
     .DrawX(DrawX),
     .DrawY(DrawY),
-    .pea_hit(0),
+    .pea_hit(zomb_pea_hit[1]),
     .plant_hit(hit[1]),
     .Xpos(Xpos[1]),
     .Ypos_out(Yrow[1]),
@@ -266,7 +256,7 @@ zombie zomb_inst_3 (
     .ypos(ypos_rand),
     .DrawX(DrawX),
     .DrawY(DrawY),
-    .pea_hit(0),
+    .pea_hit(zomb_pea_hit[2]),
     .plant_hit(hit[2]),
     .Xpos(Xpos[2]),
     .Ypos_out(Yrow[2]),
@@ -286,7 +276,7 @@ zombie zomb_inst_4 (
     .ypos(3'd3),
     .DrawX(DrawX),
     .DrawY(DrawY),
-    .pea_hit(0),
+    .pea_hit(zomb_pea_hit[3]),
     .plant_hit(hit[3]),
     .Xpos(Xpos[3]),
     .Ypos_out(Yrow[3]),
@@ -306,7 +296,7 @@ zombie zomb_inst_5 (
     .ypos(ypos_rand),
     .DrawX(DrawX),
     .DrawY(DrawY),
-    .pea_hit(0),
+    .pea_hit(zomb_pea_hit[4]),
     .plant_hit(hit[4]),
     .Xpos(Xpos[4]),
     .Ypos_out(Yrow[4]),

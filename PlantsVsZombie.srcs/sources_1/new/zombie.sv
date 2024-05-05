@@ -36,6 +36,7 @@ module zombie(
     logic       plant_no_hit_reg;
     logic [1:0] zomb_code_reg;
     logic [1:0]  action;
+    logic [1:0]   pea_hit_reg;
     
     assign action_ = action;
 
@@ -54,12 +55,23 @@ module zombie(
         end  
     end
     
+    //PeaCollosion
+    always_ff @(posedge pixel_clk)
+    begin
+        if (Reset || soft_reset || DrawY == 10'd1) begin
+            pea_hit_reg<=1'b0;
+        end else
+        if (pea_hit[0]) begin
+            pea_hit_reg<=pea_hit;
+        end  
+    end
+    
     //Spawn, Initializatio, and MOvement Update
-    always_ff @(posedge game_clk[1]) //make sure the frame clock is instantiated correctly
-    begin: Move_Ball
+    always_ff @(posedge game_clk[2]) //make sure the frame clock is instantiated correctly
+    begin: move_zombie
         if (spawn) begin
             health_reg <=4'd15;
-            velocity<=4'd1;
+            velocity<=4'd2;
             Ypos_reg <= ypos;
             zomb_code_reg <= zomb_code_i;
             action <= 2'd1;
@@ -86,19 +98,19 @@ module zombie(
             else if(Xpos_reg <= 10'd120 || plant_hit_reg) begin // eating
                 action <= 2'd2;
                 Xpos_reg <= Xpos_reg; 
-                if (pea_hit[1:1] == 1'b1) begin
-                    velocity <= velocity / 2;
+                if (pea_hit_reg[1:1] == 1'b1) begin
+                    velocity <= 4'd1;
                 end
-                if (pea_hit[0:0] == 1'b1) begin
+                if (pea_hit_reg[0:0] == 1'b1) begin
                     health_reg <= health_reg - 1;
                 end
             end else begin //walking
                 action <= 2'd1;
                 Xpos_reg <= Xpos_reg - velocity;
-                if (pea_hit[1:1] == 1'b1) begin
-                    velocity <= velocity / 2;
+                if (pea_hit_reg[1:1] == 1'b1) begin
+                    velocity <= 4'd1;
                 end
-                if (pea_hit[0:0] == 1'b1) begin
+                if (pea_hit_reg[0:0] == 1'b1) begin
                     health_reg <= health_reg - 1;
                 end
                 //leds[1] = 1;

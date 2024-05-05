@@ -8,40 +8,54 @@ module  color_mapper (input  logic       pixel_clk, frame_clk, Reset,
     parameter [7:0] entity_count = 11;
     parameter [9:0] cursor_x_offset = 147;
     parameter [9:0] cursor_y_offset = 128;
-    parameter [9:0] cursor_width = 48;
-    parameter [9:0] cursor_height = 64;
-    
+    parameter [9:0] cursor_width = 48; //47 51
+    parameter [9:0] cursor_height = 64; //62 65
     //Cursor Logic
     logic [3:0]  cursor_x;     
     logic [2:0]  cursor_y;
     logic        soft_reset;
+    logic        shovel;
     logic        reset_key;
     logic        reset;
-    logic        shovel;
-    
     //Plant Logic
     logic [2:0]  plant_code;
     logic        spawn;
     logic        plant_arr[9][5];
     logic        plant_active;
     logic        plant_hit;
-    
+    logic [1:0] plant_shoot[9][5];
     //Zombie
     logic [9:0]  zomb_draw_active_arr;
     logic [9:0]  zomb_plant_hit;
-    
+    logic [1:0]  zomb_pea_hit [10];
+    logic [9:0]  rightZomb[5];
+    logic        zomb_end;
+    //Pea
+    logic        pea_draw_active_arr [9][5];
+    logic        zomb_hit[9][5];
+    logic [3:0]  plant_x_out;
+    logic [2:0]  plant_y_out;
+    logic        shoot_signal_out;
+    logic        peaactive;
     //colors
-    logic [3:0]  bg_r, bg_g, bg_b;
+    logic [3:0] bg_r, bg_g, bg_b;
     logic [3:0]  title_r, title_g, title_b;
     logic [3:0]  lose_r, lose_g, lose_b;
     logic [3:0]  win_r, win_g, win_b;
-    logic [3:0]  plant_r, plant_g, plant_b;
-    logic [3:0]  zomb_r, zomb_g, zomb_b;
+    logic [3:0] plant_r, plant_g, plant_b;
+    logic [3:0] zomb_r, zomb_g, zomb_b;
+    logic [3:0] pea_r, pea_g, pea_b;
+    logic [3:0]  digits_r, digits_g, digits_b;
+
+    //collosion
+    logic       pea_type;
     
-    //Game logic
     logic [7:0]  game_clk;
+    
     logic [2:0]  wave;
     logic        lose_signal;
+    logic [1:0]  place;
+    logic [3:0]  digit;
     
     // 0: begin, 1: game, 2: lose, 3: win
     enum logic [1:0] {
@@ -93,7 +107,7 @@ module  color_mapper (input  logic       pixel_clk, frame_clk, Reset,
 //               if (soft_reset)
 //                   game_state_next = title;
 //               else 
-               if (lose_signal || keycode == 8'h13)
+               if (lose_signal || keycode == 8'h13 || zomb_end)
                    game_state_next = lose;
                else if (keycode == 8'h12)
                    game_state_next = win;
@@ -117,10 +131,18 @@ module  color_mapper (input  logic       pixel_clk, frame_clk, Reset,
 	       soft_reset = 1'b0;
 	   end
 	end
+	
+	always_comb begin
+	   pea_type = 1'b0;
+	   if ({pea_r, pea_g, pea_b} == 12'h0FF) begin
+	       pea_type = 1'b1;
+	   end
+	end
     
     always_comb
     begin: priorty_mux;
         plant_active = 1'b0;
+        peaactive = 1'b0;
         if (game_state == 2'd0) begin // title screen
             {Red, Green, Blue} = {title_r, title_g, title_b};
         end 
@@ -130,42 +152,81 @@ module  color_mapper (input  logic       pixel_clk, frame_clk, Reset,
         else if (game_state == 2'd3) begin // win screen
             {Red, Green, Blue} = {win_r, win_g, win_b};
         end
-        else if ({zomb_r, zomb_g, zomb_b} != 12'hf0f) begin // game screen content
-            {Red, Green, Blue} = {zomb_r, zomb_g, zomb_b};
-        end  
+        else
+        if ({pea_r, pea_g, pea_b} != 12'hf0f) begin
+            Red = pea_r;
+            Green = pea_g;
+            Blue = pea_b;
+            peaactive = 1'b1;
+        end 
         else if ({plant_r, plant_g, plant_b} != 12'hf0f) begin
             plant_active = 1'b1;
-            {Red, Green, Blue} = {plant_r, plant_g, plant_b};
-        end     
+            Red = plant_r;
+            Green = plant_g;
+            Blue = plant_b;
+        end 
+        else if ({zomb_r, zomb_g, zomb_b} != 12'hf0f) begin
+            //leds[2] = 1;
+            Red = zomb_r;
+            Green = zomb_g;
+            Blue = zomb_b;
+        end
         else if (DrawX >= 20 && DrawX < 248 && DrawY >= 20 && DrawY < 92) begin // border is 20
             {Red, Green, Blue} = 12'h741;
         end
+        else if (DrawX > 450 && DrawX < 630 && DrawY >= 10 && DrawY < 50) begin
+            {Red, Green, Blue} = {digits_r, digits_g, digits_b};
+        end  
         else if (DrawX >= (cursor_x * cursor_width + cursor_x_offset) &&
             DrawX <= (cursor_x * cursor_width + cursor_x_offset + cursor_width) &&
             DrawY >= (cursor_y * cursor_height + cursor_y_offset) &&
             DrawY <= (cursor_y * cursor_height + cursor_y_offset + cursor_height))
         begin
-            {Red, Green, Blue} = 12'h970;
+            // ball_on = 1'b1;
+            Red = 4'hf; 
+            Green = 4'h7;
+            Blue = 4'h0;
         end
         else 
         begin // background
-            {Red, Green, Blue} = {bg_r, bg_g, bg_b};
+            Red = bg_r;
+            Green = bg_g;
+            Blue = bg_b;
         end
      end 
      
     always_ff @(posedge frame_clk)
-    begin: game_clock_incrementer
-        if (soft_reset) begin
-            game_clk <= 8'b0;
-            wave <= 3'b0;
+    begin
+        game_clk <= game_clk + 1;
+    end
+    
+    always_comb 
+    begin
+        place = (DrawX -450) / 45;
+        if (place == 3) begin
+            digit = gpio_hex[3:0];
+        end 
+        else if (place == 2) begin
+            digit = gpio_hex[7:4];
         end
-        else begin
-            game_clk <= game_clk + 1;
-            if (game_clk[7]) begin
-                wave <= wave + 1;
-            end
+        else if (place == 1) begin
+            digit = gpio_hex[11:8];
+        end
+        else if (place == 0) begin
+            digit = gpio_hex[15:12];
         end
     end
+    
+digits_example (
+	.vga_clk(pixel_clk),
+	.DrawX((DrawX - 450)%45),
+	.DrawY((DrawY - 10)%45),
+	.digit(digit),
+	.blank(1'b1),
+	.red(digits_r),
+	.green(digits_g),
+	.blue(digits_b)
+   );
     
   background_example background_inst (
 	.vga_clk(pixel_clk),
@@ -191,13 +252,17 @@ plant plant_inst(
     .soft_reset(soft_reset),
     .shovel(shovel),
     .game_clk(game_clk),
+    .rightZomb(rightZomb),
+    .pea_hit(zomb_hit),
 
     .red(plant_r),
     .green(plant_g),
     .blue(plant_b),
     .plant_arr(plant_arr),
     .leds(leds),
-    .gpio_hex(gpio_hex)
+    .gpio_hex(gpio_hex),
+    .plant_shoot(plant_shoot),
+    .shoot_signal_out(shoot_signal_out)
 );
 
 cursor cursor_inst(
@@ -228,15 +293,40 @@ cursor cursor_inst(
     .draw_active_arr(zomb_draw_active_arr),
     .leds(leds),
     .game_clk(game_clk),
-    .lose(lose_signal)
+    .rightZomb(rightZomb),
+    .zomb_end(zomb_end),
+    .zomb_pea_hit(zomb_pea_hit)
     );
+    
+  all_peas_new all_peas_new_inst(
+     .soft_reset(soft_reset),
+     .Reset(Reset),
+     .frame_clk(frame_clk),
+     .game_clk(game_clk),
+     .DrawX(DrawX),
+     .DrawY(DrawY),
+     .plant_shoot(plant_shoot),
+     .shoot_signal_out(shoot_signal_out),
+     
+     .red(pea_r),
+     .green(pea_g),
+     .blue(pea_b),
+     .draw_active_arr_out(pea_draw_active_arr) 
+    );
+    
+
     
  collisions(
     .zomb_draw_active_arr(zomb_draw_active_arr),
     .plant_draw_active(plant_active),
+    .peaactive(peaactive),
+    .pea_draw_active_arr(pea_draw_active_arr),
+    .pea_type(pea_type),
     
     .plant_hit(plant_hit),
-    .zomb_plant_hit(zomb_plant_hit)
+    .zomb_plant_hit(zomb_plant_hit),
+    .zomb_pea_hit(zomb_pea_hit),
+    .zomb_hit(zomb_hit)
     );
     
 lost_screen_example (
@@ -268,5 +358,6 @@ win_screen_example (
 	.green(win_g),
 	.blue(win_b)
    );
-   
+
+	
 endmodule
